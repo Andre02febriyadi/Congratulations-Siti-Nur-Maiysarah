@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Sidang | Ucapan Istimewa</title>
+    <meta name="description" content="Ucapan selamat sidang yang hangat, floral, dan elegan untuk momen kelulusan.">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- 1. TEMA WARNA PINK & FLORAL PREMIUM --- */
+        :root {
+            --bg: #fff5f6; 
+            --surface: #ffffff;
+            --text: #4e3437; 
+            --muted: #8c7174; 
+            --accent: #e58b9b; 
+            --accent-light: #ffdce2; 
+            --shadow: rgba(229, 139, 155, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(180deg, #fffcfc 0%, var(--bg) 100%);
+            color: var(--text);
+            min-height: 100vh;
+            line-height: 1.7;
+            padding-bottom: 90px;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* --- 2. ANIMASI KELOPAK BUNGA SAKURA GUGUR --- */
+        .floral-bg {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .petal {
+            position: absolute;
+            background: linear-gradient(135deg, #ffccd5 0%, #fca1b0 100%);
+            border-radius: 12% 80% 12% 80%; 
+            animation: fallAndSpin linear infinite;
+            opacity: 0.7;
+            will-change: transform;
+        }
+
+        @keyframes fallAndSpin {
+            0% { transform: translateY(-20px) rotate(0deg) translateX(0); opacity: 0; }
+            10% { opacity: 0.8; }
+            90% { opacity: 0.8; }
+            100% { transform: translateY(105vh) rotate(450deg) translateX(80px); opacity: 0; }
+        }
+
+        .petal:nth-child(1) { left: 10%; width: 14px; height: 18px; animation-duration: 7s; animation-delay: 0s; }
+        .petal:nth-child(2) { left: 30%; width: 10px; height: 14px; animation-duration: 9s; animation-delay: 2s; }
+        .petal:nth-child(3) { left: 50%; width: 16px; height: 20px; animation-duration: 6s; animation-delay: 1s; }
+        .petal:nth-child(4) { left: 70%; width: 12px; height: 16px; animation-duration: 8s; animation-delay: 3s; }
+        .petal:nth-child(5) { left: 85%; width: 15px; height: 19px; animation-duration: 11s; animation-delay: 0.5s; }
+        .petal:nth-child(6) { left: 95%; width: 11px; height: 15px; animation-duration: 7.5s; animation-delay: 4s; }
+
+        main {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 30px 20px 20px;
+            position: relative;
+            z-index: 2; 
+        }
+
+        /* --- 3. ANIMASI TRANSISI HALAMAN (FADE IN SCALE) --- */
+        .page {
+            display: none; 
+        }
+
+        .page.active-page {
+            display: block;
+            animation: elegantFadeIn 0.7s cubic-bezier(0.215, 0.610, 0.355, 1) forwards;
+        }
+
+        @keyframes elegantFadeIn {
+            0% { opacity: 0; transform: translateY(25px) scale(0.97); }
+            100% { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        /* --- 4. HERO SECTION (HOME) --- */
+        .hero {
+            text-align: center;
+            background: var(--surface);
+            border-radius: 32px;
+            box-shadow: 0 20px 45px var(--shadow);
+            padding: 40px 25px;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(229, 139, 155, 0.2);
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255,220,226,0.5) 0%, rgba(255,255,255,0) 70%);
+            top: -50px; right: -50px;
+        }
+
+        .hero__avatar {
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            border: 4px solid var(--accent-light);
+            margin: 0 auto 24px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(229, 139, 155, 0.25);
+            transition: transform 0.4s ease;
+        }
+
+        .hero__avatar:hover { transform: scale(1.04) rotate(3deg); }
+        .hero__avatar img { width: 100%; height: 100%; object-fit: cover; }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.2rem, 5vw, 3rem);
+            color: var(--text);
+            margin-bottom: 10px;
+            letter-spacing: -0.02em;
+        }
+
+        .hero h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.4rem, 3.8vw, 1.9rem);
+            color: var(--accent);
+            margin-bottom: 18px;
+            font-weight: 600;
+        }
+
+        .hero p {
+            color: var(--muted);
+            font-size: 0.98rem;
+            max-width: 550px;
+            margin: 0 auto;
+        }
+
+        /* --- 5. STYLE SEKSI KONTEN & STORY --- */
+        .section {
+            background: var(--surface);
+            border-radius: 28px;
+            box-shadow: 0 18px 40px var(--shadow);
+            padding: 35px 26px;
+            border: 1px solid rgba(229, 139, 155, 0.15);
+        }
+
+        .section h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            margin-bottom: 16px;
+            color: var(--text);
+            position: relative;
+            display: inline-block;
+        }
+
+        .section h3::after {
+            content: "🌸";
+            font-size: 0.9rem;
+            position: absolute; right: -25px; top: 2px;
+        }
+
+        .section p { font-size: 0.98rem; color: var(--muted); margin-bottom: 16px; }
+
+        .quote {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            font-style: italic;
+            color: var(--text);
+            text-align: center;
+            padding: 22px 20px;
+            border-left: 4px solid var(--accent);
+            background: #fffcfd;
+            border-radius: 16px;
+            margin-bottom: 25px;
+        }
+
+        /* --- 6. STYLE ALBUM KOLASE POLAROID DENGAN RESOLUSI CUSTOM --- */
+        .collage-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); 
+            gap: 32px 16px; 
+            padding: 15px 5px;
+        }
+
+        .polaroid-card {
+            background: #ffffff;
+            padding: 12px 12px 20px 12px; 
+            box-shadow: 0 10px 25px rgba(78, 52, 55, 0.12);
+            position: relative;
+            border-radius: 4px; 
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        /* Efek Selotip Washi */
+        .polaroid-card::before {
+            content: "";
+            position: absolute;
+            top: -12px; left: 50%;
+            transform: translateX(-50%) rotate(-2deg);
+            width: 65px; height: 22px;
+            background: rgba(229, 139, 155, 0.25); 
+            border-left: 2px dashed rgba(255, 255, 255, 0.4);
+            border-right: 2px dashed rgba(255, 255, 255, 0.4);
+            z-index: 5;
+        }
+
+        /* Pengaturan Dasar Semua Gambar */
+        .polaroid-card img {
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+            border: 1px solid #f5ebeb;
+            display: block;
+        }
+
+        /* --- KUNCI UTAMA: PENGATURAN RASIO FOTO YANG DIGABUNGKAN --- */
+        .img-portrait {
+            aspect-ratio: 3 / 4; /* Rasio 3:4 memanjang kebawah */
+        }
+
+        .img-landscape {
+            aspect-ratio: 4 / 3; /* Rasio 4:3 melebar kesamping */
+        }
+
+        .polaroid-card p {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 0.92rem;
+            color: var(--text);
+            text-align: center;
+            margin-top: 14px;
+            font-weight: 600;
+        }
+
+        /* Efek Kemiringan Acak Buku Tempel */
+        .polaroid-card:nth-child(odd) { transform: rotate(-3deg); }
+        .polaroid-card:nth-child(even) { transform: rotate(3deg); }
+        .polaroid-card:hover { transform: scale(1.06) rotate(0deg) !important; z-index: 10; }
+
+        /* --- 7. MESSAGE CARD --- */
+        .message-card {
+            border-radius: 22px;
+            background: linear-gradient(180deg, #ffffff 0%, #fff9fa 100%);
+            padding: 24px;
+            border: 1px solid rgba(229, 139, 155, 0.18);
+            margin-bottom: 18px;
+        }
+
+        .message-card h4 { margin-bottom: 8px; color: var(--text); font-size: 1.05rem; font-weight: 600; }
+        .message-card p { color: var(--muted); font-size: 0.95rem; }
+
+        /* --- 8. NAVBAR NAVIGASI BAWAH ANDROID --- */
+        .navbar {
+            position: fixed;
+            bottom: 0; left: 0; width: 100%;
+            background: rgba(255, 255, 255, 0.94);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            display: flex;
+            justify-content: space-around;
+            padding: 14px 0;
+            box-shadow: 0 -10px 35px rgba(229, 139, 155, 0.12);
+            border-top: 1px solid rgba(229, 139, 155, 0.2);
+            z-index: 1000;
+        }
+
+        .music-control {
+            position: fixed;
+            right: 20px;
+            bottom: 76px;
+            z-index: 1001;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.95);
+            border: 1px solid rgba(229, 139, 155, 0.35);
+            border-radius: 999px;
+            padding: 10px 16px;
+            box-shadow: 0 16px 35px rgba(78, 52, 55, 0.12);
+        }
+
+        .music-control button {
+            border: none;
+            background: transparent;
+            color: var(--accent);
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .music-control button:hover {
+            transform: scale(1.05);
+        }
+
+        .nav-link {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            color: #a68b8e;
+            font-size: 0.85rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.25s ease;
+        }
+
+        .nav-link.active-nav { color: var(--accent); font-weight: 600; transform: translateY(-2px); }
+        .nav-link span { font-size: 1.4rem; transition: transform 0.2s ease; }
+        .nav-link:hover span { transform: scale(1.2); }
+
+        /* OPTIMALISASI ANDROID MOBILE */
+        @media (max-width: 620px) {
+            main { padding: 20px 15px; }
+            .hero, .section { padding: 30px 20px; }
+            .collage-container { grid-template-columns: 1fr; gap: 35px 0; } /* Menjadi 1 kolom longgar di HP agar estetika miring tetap aman */
+            .polaroid-card p { font-size: 0.85rem; }
+            .polaroid-card::before { width: 50px; height: 18px; top: -10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="floral-bg">
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+    </div>
+
+    <main>
+        <section id="home" class="page active-page hero">
+            <div class="hero__avatar">
+                <img src="Images/Foto12.jpeg" alt="Foto utama">
+            </div>
+            <h1>Congratulations Sitekk 🎉</h1>
+            <h2>Gelar S.Tr.M.J.M sudah di depan mata 🥳🔥</h2>
+            <p>Gass sat set revisian abis ini lanjut fiting outfit wisuda. Semoga perjalanan ini membawa berkah dan menjadi awal kesuksesan besar berikutnya!</p>
+        </section>
+
+        <section id="story" class="page section">
+            <div class="quote">"Keberhasilan bukan hanya tentang hasil, tetapi tentang setiap usaha yang kamu lakukan dengan penuh percaya diri."</div>
+            <h3>Perjalanan yang Diarsipkan</h3>
+            <p>Perjalanan menuju sidang akhir ini bukanlah perjalanan yang mudah. Banyak cerita, lelah, dan air mata yang menjadi saksi bagaimana kerasnya proses yang harus kamu lalui untuk sampai di titik ini. Revisi yang panjang, rasa overthinking, fase galau yang datang berkali-kali, hingga malam-malam penuh tangisan pernah menjadi bagian dari perjuanganmu💞.</p>
+            <p>Masa magang di RSUD menjadi salah satu fase yang paling menguras tenaga dan perasaan. Berangkat sejak pagi dan pulang hingga malam, menghadapi berbagai tekanan, rasa lelah, dan tanggung jawab yang tidak sedikit. Ada hari-hari ketika tubuh terasa sangat capek, pikiran penuh, dan hati ingin menyerah, tetapi kamu tetap mencoba bertahan walau tidak selalu mudah💫.</p>
+            <p>Belum lagi saat menjalani penelitian, ketika semuanya tiba-tiba berubah karena program MBG dihentikan akibat anggaran yang tidak turun. Rasa kecewa, bingung, panik, dan tangisan bercampur menjadi satu. Rasanya seperti semua usaha yang sudah diperjuangkan perlahan runtuh begitu saja. Namun di tengah keadaan yang tidak sesuai harapan itu, kamu tetap mencoba bangkit dan melanjutkan semuanya sampai akhirnya berada di fase ini🤎.</p>
+            <P>Di balik semua perjuangan itu, ada doa dan dukungan orang tua yang tidak pernah habis. Mereka selalu menjadi tempat pulang saat keadaan terasa berat, menjadi penguat di saat kamu ingin menyerah, dan tetap percaya bahwa kamu mampu melewati semuanya. Kasih sayang, pengorbanan, dan dukungan mereka menjadi alasan terbesar mengapa kamu masih terus melangkah sampai sejauh ini✨.</P>
+            <P>Semua air mata, rasa kecewa, kelelahan, dan perjuangan yang pernah kamu rasakan kini menjadi bukti bahwa kamu adalah pribadi yang kuat. Tidak ada proses yang sia-sia, karena setiap luka dan cerita dalam perjalanan ini telah membentukmu menjadi seseorang yang mampu bertahan sampai akhir🔥.</P>
+            <P>Semoga sidang akhir ini menjadi penutup indah dari semua perjuangan panjangmu, dan menjadi awal untuk langkah baru yang lebih bahagia. Selamat berjuang, semoga semua doa, usaha, dan pengorbananmu terbayarkan dengan hasil terbaik. 🌷</P>
+        </section>
+
+        <section id="gallery" class="page section">
+            <h3>Kenangan Terbaik</h3>
+            <div class="collage-container">
+                
+                <article class="polaroid-card">
+                    <img src="Images/Foto1.jpeg" class="img-landscape" alt="Momen Bersama">
+                    <p>Akhir dari Revisi</p>
+                </article>
+
+                <article class="polaroid-card">
+                    <img src="Images/Foto2.jpeg" class="img-portrait" alt="Persiapan Serius">
+                    <p>Senyum Penuh Lega</p>
+                </article>
+
+                <article class="polaroid-card">
+                    <img src="Images/Foto3.jpeg" class="img-landscape" alt="Belajar Bersama">
+                    <p>Tawa Tanpa Beban</p>
+                </article>
+
+                <article class="polaroid-card">
+                    <img src="Images/Foto4.jpeg" class="img-portrait" alt="Momen Haru">
+                    <p>Wajah Bebas Skripsi</p>
+                </article>
+                
+                <article class="polaroid-card">
+                    <img src="Images/Foto5.jpeg" class="img-landscape" alt="Momen Bersama">
+                    <p>Momen Paling Ditunggu</p>
+                </article>
+
+                <article class="polaroid-card">
+                    <img src="Images/Foto6.jpeg" class="img-portrait" alt="Persiapan Serius">
+                    <p>Hari Kemenangan</p>
+                </article>
+
+                <article class="polaroid-card">
+                    <img src="Images/Foto7.jpeg" class="img-landscape" alt="Momen Bersama">
+                    <p>Senyum Sang Pemenang</p>
+                </article>
+
+                <article class="polaroid-card">
+                    <img src="Images/Foto9.jpeg" class="img-portrait" alt="Persiapan Serius">
+                    <p>Perjuangan Tak Mengkhianati</p>
+                </article>
+
+                <article class="polaroid-card">
+                    <img src="Images/Foto10.jpeg" class="img-portrait" alt="Persiapan Serius">
+                    <p>Begadang Terbayar Lunas</p>
+                </article>
+
+                 <article class="polaroid-card">
+                    <img src="Images/Foto11.jpeg" class="img-landscape" alt="Belajar Bersama">
+                    <p>Melewati Masa Kritis</p>
+                 </article>
+
+                    <article class="polaroid-card">
+                    <img src="Images/Foto12.jpeg" class="img-portrait" alt="Persiapan Serius">
+                    <p>Bukti Sebuah Kerja Keras, apa pun masalahnya makan solusinya</p>
+                </article>
+
+                 <article class="polaroid-card">
+                    <img src="Images/Foto13.jpeg" class="img-landscape" alt="Momen Haru">
+                    <p>Menolak Menyerah</p>
+                 </article>
+
+                <article class="polaroid-card">
+                    <img src="Images/Foto14.jpeg" class="img-portrait" alt="Persiapan Serius">
+                    <p>Lelah yang Berbuah Manis</p>
+                </article>
+                
+                <article class="polaroid-card">
+                        <img src="Images/Foto15.jpeg" class="img-landscape" alt="Momen Bersama">
+                        <p>Satu Langkah Lebih Dekat </p>
+                </article>
+                
+                <article class="polaroid-card">
+                    <img src="Images/Foto16.jpeg" class="img-portrait" alt="Persiapan Serius">
+                    <p>Ini Bonus Dari Suma</p>
+                </article>
+                         
+                <article class="polaroid-card">
+                    <img src="Images/Foto17.jpeg" class="img-landscape" alt="Persiapan Serius">
+                    <p>Kenangan Gunung Luhur</p>
+                </article>
+
+                 <article class="polaroid-card">
+                    <img src="Images/Foto18.jpeg" class="img-portrait" alt="Persiapan Serius">
+                    <p>Di sini sihh yang paling bagus</p>
+                </article>
+
+                 <article class="polaroid-card">
+                    <img src="Images/Foto19.jpeg" class="img-landscape" alt="Persiapan Serius">
+                    <p>Dibalik senyuman pasti ada keluh kesah</p>
+                </article>
+
+                 <article class="polaroid-card">
+                    <img src="Images/Foto20.jpeg" class="img-portrait" alt="Persiapan Serius">
+                    <p>Buang semua masalah fokus sama tujuan </p>
+                </article>
+
+                 <article class="polaroid-card">
+                    <img src="Images/Foto21.jpeg" class="img-landscape" alt="Persiapan Serius">
+                    <p>Perjuangan yang panjang walaupun dipenuhi keluh kesah</p>
+                </article>
+
+                 <article class="polaroid-card">
+                    <img src="Images/Foto22.jpeg" class="img-portrait" alt="Persiapan Serius">
+                    <p>Kenangan Terakhir Kita, see you next time myfriend</p>
+                 </article>
+
+                 <article class="polaroid-card">
+                    <img src="Images/Foto23.jpeg" class="img-portrait" alt="Persiapan Serius">
+                    <p>Foto Masa Kecil yang udah dipost berkali-kali</p>
+
+                   
+            </div>
+        </section>
+
+        <section id="messages" class="page section">
+            <h3>Pesan dan Doa</h3>
+            <div class="message-card">
+                <h4>Dari Andre Febriyadi 💌🥰</h4>
+                <p>"Congrats Sitekk! Cieeee yang udahh jadi S. Tr. M.J.M, Semoga Berkah Ilmunya dan gak pusing pusing lagi mikirin tugas, Hari ini menunjukkan bahwa semua usaha dan ketekunanmu sangat berarti. Semoga setiap langkah ke depan makin membawa kebahagiaan, dannnn Selamat bergabung di 19 juta lapangan pekerjaan 🤣🤣😭😭😭 HIDUP JOKOWIIIIIII!!!!!!!"</p>
+            </div>
+            <div class="message-card">
+                <h4>Dari Suma Fitri Ramadhani ✨😍</h4>
+                <p>"SELAMAT SIDANG AKHIR SITI NUR MAISYARAH, S.Tr M.J.M Semoga ilmu manajemen gizinya bermanfaat, gelar barunya membawa barakah, dan langkah kedepan semakin sukses. Semangat menerjun ke medan perang cuan cuann cuannn❤️"</p>
+            </div>
+            <div class="message-card">
+                <h4>Dari Azza Rozalina Haidir 💫🖤</h4>
+                <p>"Congrats mba titi, akhirnya udah bisa ditahap ini. Dipermudah dan diperlancar buat langkah selanjutnya semangattt terus mba titi 💕💕"</p>
+            </div>
+            <div class="message-card">
+                <h4>Dari Nisa Akmala 💖💞</h4>
+                <p>"Selamat sidang Kak Sitii, semoga dilancarkan selalu kedepannya!!! Semoga ilmu dan pengalaman bisa mengantarkan kamu ke jalan kesuksesan. Aamiin💞💕💞"</p>
+            </div>
+             <div class="message-card">
+                <h4>Dari Nesa 🤎🤎</h4>
+                <p>"my dearest sitiekkk, congratulations! now op to your next chapter of life- whatever it may be, througout it all; i promise i’ll always be there.jangan lupa bilang makasih untuk diri sendiri. xo, nesa cantik"</p>
+            </div>
+            <div class="message-card">
+                <h4>Dari Octari Rahmawati🌈🌟✨</h4>
+                <p>"SELAMAT SIDANG AKHIR SITI NUR MAISYARAH, S.Tr M.J.M ✨ Selamat atas perjuangan yang akhirnya sampai di titik ini. Semoga sidangnya dipermudah, hasilnya memuaskan, dan perjalanan setelah kampus membawa banyak pengalaman baik, orang-orang baik, karier yang lancar, dan hidup yang semakin membahagiakan"</p>
+            </div>
+        </section>
+    </main>
+
+    <div class="music-control">
+        <button id="musicToggle" onclick="toggleMusic()">▶️ Backsound</button>
+    </div>
+    <audio id="background-music" loop src="Images/Backsound.mp3"></audio>
+
+    <nav class="navbar">
+        <div class="nav-link active-nav" onclick="switchPage('home', this)">
+            <span>🏠</span>Home
+        </div>
+        <div class="nav-link" onclick="switchPage('story', this)">
+            <span>📖</span>Story
+        </div>
+        <div class="nav-link" onclick="switchPage('gallery', this)">
+            <span>🖼️</span>Gallery
+        </div>
+        <div class="nav-link" onclick="switchPage('messages', this)">
+            <span>💌</span>Pesan
+        </div>
+    </nav>
+
+    <script>
+        function switchPage(pageId, element) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.classList.remove('active-page'));
+            
+            document.getElementById(pageId).classList.add('active-page');
+
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => link.classList.remove('active-nav'));
+            element.classList.add('active-nav');
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function toggleMusic() {
+            const audio = document.getElementById('background-music');
+            const button = document.getElementById('musicToggle');
+
+            if (audio.paused) {
+                audio.play().then(() => {
+                    button.textContent = '⏸️ Backsound';
+                }).catch(() => {
+                    button.textContent = '▶️ Backsound';
+                });
+            } else {
+                audio.pause();
+                button.textContent = '▶️ Backsound';
+            }
+        }
+    </script>
+</body>
+</html>
